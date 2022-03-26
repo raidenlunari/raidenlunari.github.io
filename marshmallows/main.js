@@ -1,7 +1,7 @@
 var gameData = {
     marsh: 0,
     marshPerClick: 1,
-    marshPerClickCost: 10
+    marshPerClickCost: 10,
   }
   
   function duplicateMarsh() {
