@@ -13,7 +13,9 @@ var gameData = {
     if (gameData.marsh >= gameData.marshPerClickCost) {
       gameData.marsh -= gameData.marshPerClickCost
       gameData.marshPerClick += 1
-      gameData.marshPerClick *= 2
+      gameData.marshPerClickCost *= 2
+      document.getElementById("marshDuplicated").innerHTML = gameData.marsh + " Marshmallows Duplicated"
+      document.getElementById("perClickUpgrde").innerHTML = "Improve Duplication (Currently Level " + gameData.marshPerClick + ") Cost: " + gameData.marshPerClickCost + " Marshmallows"
     }
   }
 
