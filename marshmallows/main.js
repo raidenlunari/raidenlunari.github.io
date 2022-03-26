@@ -2,6 +2,8 @@ var gameData = {
     marsh: 0,
     marshPerClick: 1,
     marshPerClickCost: 10,
+    marshVillageCost: 100,
+    marshVillage: 0,
   }
   
   function duplicateMarsh() {
@@ -19,6 +21,22 @@ var gameData = {
     }
   }
 
-//   var mainGameLoop = window.setInterval(function() {
-//     duplicateMarsh()
-//   }, 1000000)
+  function makeMarshVillage() {
+      if (gameData.marsh >= gameData.marshVillageCost) {
+          gameData.marsh -= gameData.marshVillageCost
+          gameData.marshPerClick = 1
+          gameData.marshVillage += 1
+          gameData.marshPerClickCost = 10/(1.1^(gameData.marshVillage))
+          gameData.marshVillageCost *= 1.5
+          document.getElementById("marshDuplicated").innerHTML = gameData.marsh + " Marshmallows Dupicated"
+          document.getElementById("perVillageUpgrade").innerHTML = "Create Village (Currently " + gameData.marshVillage + " Villages) Cost: " + gameData.marshVillageCost + " Marshmallows"
+      }
+  }
+  var saveGameLoop = window.setInterval(function() {
+    localStorage.setItem("marshmallowSave", JSON.stringify(gameData))
+  }, 15000)
+
+  var savegame = JSON.parse(localStorage.getItem("marshmallowSave"))
+if (savegame !== null) {
+  gameData = savegame
+}
