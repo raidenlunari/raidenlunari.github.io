@@ -27,7 +27,7 @@ var gameData = {
           gameData.marshPerClick = 1
           gameData.marshVillage += 1
           gameData.marshPerClickCost = 10/(1.1^(gameData.marshVillage))
-          gameData.marshVillageCost *= 1.5
+          gameData.marshVillageCost *= 2
           document.getElementById("marshDuplicated").innerHTML = gameData.marsh + " Marshmallows Dupicated"
           document.getElementById("perVillageUpgrade").innerHTML = "Create Village (Currently " + gameData.marshVillage + " Villages) Cost: " + gameData.marshVillageCost + " Marshmallows"
       }
