@@ -19,6 +19,6 @@ var gameData = {
     }
   }
 
-  var mainGameLoop = window.setInterval(function() {
-    duplicateMarsh()
-  }, 1000000)
+//   var mainGameLoop = window.setInterval(function() {
+//     duplicateMarsh()
+//   }, 1000000)
