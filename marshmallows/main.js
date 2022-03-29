@@ -8,7 +8,7 @@ var gameData = {
   
   function duplicateMarsh() {
     gameData.marsh += gameData.marshPerClick
-    document.getElementById("marshDuplicated").innerHTML = Math.floor(gameData.marsh) + " Marshmallows Duplicated"
+    document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
   }
 
   function dupMarshPerClick() {
@@ -16,8 +16,8 @@ var gameData = {
       gameData.marsh -= gameData.marshPerClickCost
       gameData.marshPerClick += 1
       gameData.marshPerClickCost *= 2
-      document.getElementById("marshDuplicated").innerHTML = Math.floor(gameData.marsh) + " Marshmallows Duplicated"
-      document.getElementById("perClickUpgrade").innerHTML = "Improve Duplication (Currently Level " + gameData.marshPerClick + ") Cost: " + Math.floor(gameData.marshPerClickCost) + " Marshmallows"
+      document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
+      document.getElementById("perClickUpgrade").innerHTML = "Improve Duplication (Currently Level " + gameData.marshPerClick + ") Cost: " + Math.round(gameData.marshPerClickCost) + " Marshmallows"
     }
   }
 
@@ -28,8 +28,8 @@ var gameData = {
           gameData.marshVillage += 1
           gameData.marshPerClickCost = 10/(1.1^(gameData.marshVillage))
           gameData.marshVillageCost *= 2
-          document.getElementById("marshDuplicated").innerHTML = Math.floor(gameData.marsh) + " Marshmallows Dupicated"
-          document.getElementById("perVillageUpgrade").innerHTML = "Create Village (Currently " + gameData.marshVillage + " Villages) Cost: " + Math.floor(gameData.marshVillageCost) + " Marshmallows"
+          document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Dupicated"
+          document.getElementById("perVillageUpgrade").innerHTML = "Create Village (Currently " + gameData.marshVillage + " Villages) Cost: " + Math.round(gameData.marshVillageCost) + " Marshmallows"
       }
   }
   var saveGameLoop = window.setInterval(function() {
