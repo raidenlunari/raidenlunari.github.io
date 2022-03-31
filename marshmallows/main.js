@@ -43,7 +43,6 @@ var gameData = {
       updateVisual()
       }
   }
-
 // Marshmallow factory
   function makeMarshFactory() {
     if (gameData.marsh >= gameData.marshFactoryCost) {
@@ -51,7 +50,7 @@ var gameData = {
       gameData.marshFactory += 1
       gameData.marshFactoryCost *= 1.5
       updateVisual()
-      }
+    }
   }
 
 // <!-- Key press detection -->
