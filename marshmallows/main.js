@@ -53,14 +53,6 @@ var gameData = {
     }
   }
 
-// <!-- Key press detection -->
-  document.addEventListener("keypress", function(event) {
-  if (event.keyCode == 13) {
-    alert('reseet');
-    savegame = null;
-    }
-  });
-
 // Main Loop
   var mainGameLoop = window.setInterval(function() {
     duplicateMarsh()
