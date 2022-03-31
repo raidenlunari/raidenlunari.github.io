@@ -8,7 +8,7 @@ var gameData = {
     marshFactory: 0,
   }
 
-  // Visual Updates
+// Visual Updates
   function updateVisual() {
     document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
     document.getElementById("perClickUpgrade").innerHTML = "Improve Duplication (Currently Level " + gameData.marshPerClick + ") Cost: " + Math.round(gameData.marshPerClickCost) + " Marshmallows"
@@ -16,7 +16,7 @@ var gameData = {
     document.getElementById("perFactoryUpgrade").innerHTML = "Build Factory (Currently " + gameData.marshFactory + " Factories) Cost: " + Math.round(gameData.marshFactoryCost) + " Marshmallows"
   }
 
-  // Duplicate Marshmallows
+// Duplicate Marshmallows
 
   function duplicateMarsh() {
     gameData.marsh += gameData.marshPerClick
@@ -32,7 +32,7 @@ var gameData = {
     }
   }
 
-  // Marshmallow village
+// Marshmallow village
   function makeMarshVillage() {
     if (gameData.marsh >= gameData.marshVillageCost) {
       gameData.marsh -= gameData.marshVillageCost
@@ -43,7 +43,8 @@ var gameData = {
       updateVisual()
       }
   }
-  // Marshmallow factory
+
+// Marshmallow factory
   function makeMarshFactory() {
     if (gameData.marsh >= gameData.marshFactoryCost) {
       gameData.marsh -= gameData.marshFactoryCost
@@ -53,7 +54,7 @@ var gameData = {
       }
   }
 
-  // <!-- Key press detection -->
+// <!-- Key press detection -->
   document.addEventListener("keypress", function(event) {
   if (event.keyCode == 13) {
     alert('reseet');
@@ -61,17 +62,17 @@ var gameData = {
     }
   });
 
-  // Main Loop
+// Main Loop
   var mainGameLoop = window.setInterval(function() {
     duplicateMarsh()
   }, 10000/(1.1^gameData.marshFactory))
 
-  // Save loop
+// Save loop
   var saveGameLoop = window.setInterval(function() {
     localStorage.setItem("marshmallowSave", JSON.stringify(gameData))
   }, 15000)
 
-  // Loads the game
+// Loads the game
   var savegame = JSON.parse(localStorage.getItem("marshmallowSave"))
   if (savegame !== null) {
     gameData = savegame
