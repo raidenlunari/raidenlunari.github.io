@@ -35,7 +35,7 @@ var gameData = {
       }
   }
 
-  function makeFactory() {
+  function makeMarshFactory() {
       if (gameData.marsh >= gameData.marshFactoryCost) {
           gameData.marsh -= gameData.marshFactoryCost
           gameData.marshFactory += 1
