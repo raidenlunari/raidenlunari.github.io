@@ -54,6 +54,6 @@ var gameData = {
   }, 15000)
 
   var savegame = JSON.parse(localStorage.getItem("marshmallowSave"))
-if (savegame !== null) {
-  gameData = savegame
-}
+  if (savegame !== null) {
+    gameData = savegame
+  }
