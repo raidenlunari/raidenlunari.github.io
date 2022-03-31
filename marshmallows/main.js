@@ -39,7 +39,7 @@ var gameData = {
       if (gameData.marsh >= gameData.marshFactoryCost) {
           gameData.marsh -= gameData.marshFactoryCost
           gameData.marshFactory += 1
-          gameData.marshFactoryCost *= 1.3
+          gameData.marshFactoryCost *= 1.5
           document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
           document.getElementById("perFactoryUpgrade").innerHTML = "Build Factory (Currently " + gameData.marshFactory + " Factories) Cost: " + Math.round(gameData.marshFactoryCost) + " Marshmallows"
       }
