@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Marshmallows</title>
-  </head>
-  <body>
-    <p id="marshDuplicated">0 Marshmallows Duplicated</p>
-    <button onclick="duplicateMarsh()">Duplicate Marshmallow</button>
-    <button onclick="dupMarshPerClick()" id="perClickUpgrade">Improve Duplication (Currently Level 1) Cost: 10 Marshmallows</button>
-    <button onclick="makeMarshVillage()" id="perVillageUpgrade">Create Village (Currently 0 Villages) Cost: 100 Marshmallows</button>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Marshmallows</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Marshmallow Duplicated Text -->
+  <h1 id="marshDuplicated">0 Marshmallows Duplicated</h1>
+
+  <!--  Duplicate Marshmallows  -->
+  <button onclick="duplicateMarsh()">Duplicate Marshmallow</button>
+
+  <!-- Improve Duplication Button -->
+  <button onclick="dupMarshPerClick()" id="perClickUpgrade">Improve Duplication (Currently Level 1) Cost: 10
+    Marshmallows</button>
+
+  <!-- Buildings Header -->
+  <h4>
+    Buildings
+  </h4>
+
+  <!-- Marshmallow Village Button -->
+  <button onclick="makeMarshVillage()" id="perVillageUpgrade">Create Village (Currently 0 Villages) Cost: 100
+    Marshmallows</button>
+
+  <!-- JAVASCRIPT LOAD -->
+  <script src="main.js" charset="utf-8" type="text/javascript"></script>
+
+</body>
+
 </html>

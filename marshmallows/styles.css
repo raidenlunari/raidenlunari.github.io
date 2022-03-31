@@ -1,0 +1,22 @@
+/* Booty */
+button {
+  font-family: georgia;
+  font-size: 12px;
+}
+
+
+/* Marshmallows Duplicated Text */
+h1 {
+  font-family: garamond;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Buildings Header */
+h4 {
+  font-family: garamond;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
