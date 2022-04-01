@@ -8,6 +8,8 @@ var gameData = {
     marshFactory: 0,
   }
 
+var blankGameData = gameData
+
 // Visual Updates
   function updateVisual() {
     document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
@@ -52,6 +54,22 @@ var gameData = {
       updateVisual()
     }
   }
+
+// <!-- Key press detection -->
+  document.addEventListener("keypress", function(event) {
+  if (event.keyCode == 13) {
+    var commandPrompt = prompt("Enter Command (cancel, save, reset)")
+
+    console.log(commandPrompt)
+    switch(commandPrompt) {
+      case 'reset':
+        localStorage.setItem("marshmallowSave",JSON.stringify(blankGameData))
+        location.reload()
+      case 'save':
+        localStorage.setItem("marshmallowSave",JSON.stringify(gameData))
+    }
+    }
+  });
 
 // Main Loop
   var mainGameLoop = window.setInterval(function() {
