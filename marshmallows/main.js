@@ -10,6 +10,8 @@ var gameData = {
 
 var blankGameData = gameData
 
+console.log(blankGameData)
+
 // Visual Updates
   function updateVisual() {
     document.getElementById("marshDuplicated").innerHTML = Math.round(gameData.marsh) + " Marshmallows Duplicated"
@@ -63,8 +65,10 @@ var blankGameData = gameData
     console.log(commandPrompt)
     switch(commandPrompt) {
       case 'reset':
-        localStorage.setItem("marshmallowSave",JSON.stringify(blankGameData))
-        location.reload()
+        gameData = blankGameData
+        localStorage.setItem('marshmallowSave',JSON.stringify(blankGameData))
+        updateVisual()
+        alert('Progress reset.')
       case 'save':
         localStorage.setItem("marshmallowSave",JSON.stringify(gameData))
     }
