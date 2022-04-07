@@ -6,6 +6,7 @@ var gameData = {
     marshVillage: 0,
     marshFactoryCost: 2500,
     marshFactory: 0,
+    marshAutoTicks: 10000,
   }
 
 var blankGameData = gameData
@@ -42,7 +43,7 @@ console.log(blankGameData)
       gameData.marsh -= gameData.marshVillageCost
       gameData.marshPerClick = 1
       gameData.marshVillage += 1
-      gameData.marshPerClickCost = 10/(1.1^(gameData.marshVillage))
+      gameData.marshPerClickCost /= 1.1
       gameData.marshVillageCost *= 2
       updateVisual()
       }
@@ -53,6 +54,7 @@ console.log(blankGameData)
       gameData.marsh -= gameData.marshFactoryCost
       gameData.marshFactory += 1
       gameData.marshFactoryCost *= 1.5
+      gameData.marshAutoTicks /= 1.1
       updateVisual()
     }
   }
@@ -78,7 +80,7 @@ console.log(blankGameData)
 // Main Loop
   var mainGameLoop = window.setInterval(function() {
     duplicateMarsh()
-  }, (10000/(1.1^gameData.marshFactory)))
+  }, gameData.marshAutoTicks)
 
 // Save loop
   var saveGameLoop = window.setInterval(function() {
