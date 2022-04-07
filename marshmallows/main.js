@@ -78,7 +78,7 @@ console.log(blankGameData)
 // Main Loop
   var mainGameLoop = window.setInterval(function() {
     duplicateMarsh()
-  }, 10000/(1.1^gameData.marshFactory))
+  }, (10000/(1.1^gameData.marshFactory)))
 
 // Save loop
   var saveGameLoop = window.setInterval(function() {
