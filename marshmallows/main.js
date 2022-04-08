@@ -43,7 +43,7 @@ console.log(blankGameData)
       gameData.marsh -= gameData.marshVillageCost
       gameData.marshPerClick = 1
       gameData.marshVillage += 1
-      gameData.marshPerClickCost /= 1.1
+      gameData.marshPerClickCost = 10/(1.1^gameData.marshVillage)
       gameData.marshVillageCost *= 2
       updateVisual()
       }
