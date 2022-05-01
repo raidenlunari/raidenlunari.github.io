@@ -78,12 +78,12 @@ console.log(blankGameData)
   });
 
 // Main Loop
-  var mainGameLoop = window.setInterval(function() {
+  var mainGameLoop = window.setInterval(function(){
     duplicateMarsh()
-  }, gameData.marshAutoTicks)
+  }, Math.round(gameData.marshAutoTicks))
 
 // Save loop
-  var saveGameLoop = window.setInterval(function() {
+  var saveGameLoop = window.setInterval(function(){
     localStorage.setItem("marshmallowSave", JSON.stringify(gameData))
   }, 15000)
 
