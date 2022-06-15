@@ -54,7 +54,7 @@ console.log(blankGameData)
       gameData.marsh -= gameData.marshFactoryCost
       gameData.marshFactory += 1
       gameData.marshFactoryCost *= 1.5
-      gameData.marshAutoTicks /= 1.1
+      gameData.marshAutoTicks -= (gameData.marshAutoTicks*0.1)
       updateVisual()
     }
   }
